@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import blockinfo from "@/components/blockinfo";
+import upload_trans from "@/components/upload_trans";
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +11,15 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path:'/blockinfo',
+    component: blockinfo
+  },
+  {
+    path:"/upload",
+    component: upload_trans
+  },
+
   {
     path: '/about',
     name: 'about',
