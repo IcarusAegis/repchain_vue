@@ -102,6 +102,7 @@ export default {
   created() {
     this.test();
 
+
   },
   activated() {
     this.get_chainData();

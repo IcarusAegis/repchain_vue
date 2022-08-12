@@ -1,36 +1,18 @@
 <template>
   <div>
+    <h1>当前链总高度：{{this.chain_info['result']['height']}}</h1>
     <div>
+      <h1>块高度：<input v-model="height" placeholder="" style="width: 100px;"></h1>
       <button @click="post_height()">确定</button>
-      <h1>块高度：<input v-model="height" placeholder="4" style="width: 100px;"></h1>
     </div>
+
   <div v-if="flag">
     <h1>blockinfo</h1>
-<!--    <span v-for="items in this.args[0]"> {{items}}</span>-->
-<!--    {{this.transactions}}-->
-<!--    <ol>-->
-<!--      <li v-for="transaction in this.transactions">-->
-<!--        {{transaction.id}}-->
-<!--      </li>-->
-<!--    </ol>-->
+
+
     <el-table
         :data="this.tableData"
         style="width: 100%">
-<!--      <el-table-column type="expand">-->
-<!--        <template slot-scope="props">-->
-<!--          <el-form label-position="left" inline class="demo-table-expand">-->
-<!--            <el-form-item label="商品名称">-->
-<!--              <span>{{ props.row.name }}</span>-->
-<!--            </el-form-item>-->
-<!--            <el-form-item label="args">-->
-<!--              <span v-for="items in this.args[0]"> {{items}}</span>-->
-<!--            </el-form-item>-->
-<!--&lt;!&ndash;            <el-form-item label="args">&ndash;&gt;-->
-<!--&lt;!&ndash;              <span v-for="items in this.args[0]"> {{items}}</span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </el-form-item>&ndash;&gt;-->
-<!--          </el-form>-->
-<!--        </template>-->
-<!--      </el-table-column>-->
       <el-table-column prop="no" label="no" width="60%"></el-table-column>
       <el-table-column prop="id" label="id"></el-table-column>
       <el-table-column prop="type" label="type"></el-table-column>
@@ -55,6 +37,8 @@ export default {
   name: "blockinfo",
   created() {
     // this.test();
+    this.get_chain_info();
+
 
   },
   activated() {
@@ -67,6 +51,7 @@ export default {
       tableData: [],
       height:"",
       args:"",
+      chain_info:'',
 
 
     }
@@ -86,6 +71,14 @@ export default {
 
       })
     },
+    get_chain_info(){
+      axios.get('http://127.0.0.1:5000/chain_info').then((res)=>{
+        console.log(res.data);
+        this.chain_info=res.data;
+
+      })
+    },
+
     post_height(){
       const path = 'http://127.0.0.1:5000/height';
       var dict = {"height":this.height};
