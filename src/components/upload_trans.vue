@@ -101,8 +101,6 @@ export default {
   name: "upload_trans",
   created() {
     this.test();
-
-
   },
   activated() {
     this.get_chainData();
