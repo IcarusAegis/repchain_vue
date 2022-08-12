@@ -130,7 +130,6 @@ export default {
         chaincode_name:'',
         chaincode_ver:"",
         func_name:'',
-
       },
       fileList:[],
     }

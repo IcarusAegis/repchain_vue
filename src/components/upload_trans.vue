@@ -8,7 +8,6 @@
           action="http://127.0.0.1:5000/upload_jks"
           :on-preview="handlePreview"
           :on-remove="handleRemove"
-
           :file-list="fileList"
           :auto-upload="false">
         <el-button slot="trigger" size="small" type="primary">选取文件</el-button>

@@ -8,7 +8,6 @@
 
   <div v-if="flag">
     <h1>blockinfo</h1>
-
     <el-table
         :data="this.tableData"
         style="width: 100%">
