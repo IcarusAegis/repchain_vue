@@ -46,10 +46,10 @@ export default {
       result:{},
       transactions:[],
       flag:false,
-      tableData: [],
-      height:"",
-      args:"",
-      chain_info:'',
+      tableData: [],//表格数据
+      height:"",//
+      args:"",//
+      chain_info:'',//
 
 
     }
