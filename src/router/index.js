@@ -3,13 +3,17 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import blockinfo from "@/components/blockinfo";
 import upload_trans from "@/components/upload_trans";
+import setting from "@/components/setting";
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'blockinfo',
+    component: blockinfo
+  },{
+    path:'/setting',
+    component: setting
   },
   {
     path:'/blockinfo',
