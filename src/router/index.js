@@ -4,6 +4,8 @@ import HomeView from '../views/HomeView.vue'
 import blockinfo from "@/components/blockinfo";
 import upload_trans from "@/components/upload_trans";
 import setting from "@/components/setting";
+import api_test from "@/components/api_test";
+import api from "@/views/api";
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,6 +21,15 @@ const routes = [
     path:'/blockinfo',
     component: blockinfo
   },
+  {
+    path: '/api_test',
+    component: api_test
+  },
+  {
+    path:'/api',
+    component: api,
+  }
+    ,
   {
     path:"/upload",
     component: upload_trans
