@@ -4,6 +4,7 @@
     <!--    <h1>api view</h1>-->
     <api_login> </api_login>
     <api_register></api_register>
+    <api_jks_download></api_jks_download>
   </div>
 
 
@@ -13,9 +14,10 @@
 <script>
 import api_login from "@/components/api_login";
 import api_register from "@/components/api_register";
+import api_jks_download from "@/components/api_jks_download";
 export default {
   name: "api",
-  components: {api_login,api_register},
+  components: {api_login,api_register,api_jks_download},
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
