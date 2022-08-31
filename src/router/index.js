@@ -6,6 +6,7 @@ import upload_trans from "@/components/upload_trans";
 import setting from "@/components/setting";
 import api_test from "@/components/api_test";
 import api from "@/views/api";
+import create_upload_trans_dataHex from "@/components/create_upload_trans_data(hex)";
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,6 +34,10 @@ const routes = [
   {
     path:"/upload",
     component: upload_trans
+  },
+  {
+    path:"/create_upload_trans_dataHex",
+    component: create_upload_trans_dataHex
   },
 
   {

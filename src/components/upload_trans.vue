@@ -1,6 +1,7 @@
 <template>
 
   <div>
+    <h1>请先上传jks文件</h1>
     <div>
       <el-upload
           class="upload-demo"

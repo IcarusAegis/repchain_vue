@@ -4,6 +4,7 @@
       <router-link to="/blockinfo">blockinfo</router-link> |
       <router-link to="/upload">upload</router-link>|
       <router-link to="/setting">setting</router-link>|
+      <router-link to="/create_upload_trans_dataHex">create_data</router-link>|
       <router-link to="/api">api</router-link>
     </nav>
     <router-view/>

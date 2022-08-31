@@ -9,6 +9,9 @@
         <el-form-item label="data">
           <el-input v-model="chain_info.data"></el-input>
         </el-form-item>
+        <el-form-item label="callbackIp">
+          <el-input v-model="chain_info.callbackIp"></el-input>
+        </el-form-item>
       </el-form>
 
       <el-button @click="submit_api_login">提交</el-button>
@@ -26,7 +29,8 @@ export default {
       labelPosition: 'left',
       chain_info: {
         token : "",
-        data:''
+        data:'',
+        callbackIp:'',
       },
 
     };
