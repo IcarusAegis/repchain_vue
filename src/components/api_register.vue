@@ -83,7 +83,7 @@ export default {
     submit_api_login(){
       axios.post('http://127.0.0.1:5000/submit_api_register',this.register_info).then((res)=>{
         console.log(res.data);
-        if (res.data['code']!=200){
+        if (res.data['status']==400){
           let info;
           let data;
           data=res.data;
@@ -101,9 +101,16 @@ export default {
 
 
         }
-        else{
+        else if(res.data['code']==200){
           alert('注册成功')
         }
+        else {
+          let info;
+          info='code:'+String(res.data['code'])+'\n'+'message:'+String(res.data['message'])
+          // alert()
+          alert(info)
+        }
+
 
 
       })

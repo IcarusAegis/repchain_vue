@@ -48,24 +48,13 @@ export default {
         console.log(res.data);
         if (res.data['code']!=200){
           let info;
-          let data;
-          data=res.data;
-          info=String('code:'+data['status']) +'\n'
-              + String(data['error'])+'\n'
-              +'错误信息：'+'\n';
-
-          for (let i =0; i<data['errors'].length; i++)
-          {
-
-            info=info+String(data['errors'][i]['defaultMessage'])+'\n'
-          }
-
+          info='code:'+String(res.data['code'])+'\n'+'message:'+String(res.data['message'])
+          // alert()
           alert(info)
-
-
         }
         else{
           alert('下载成功')
+
         }
   })
 },
